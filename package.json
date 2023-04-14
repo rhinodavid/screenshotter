@@ -1,16 +1,16 @@
 {
   "name": "ts-node-starter",
   "version": "1.0.0",
-  "main": "build/index.js",
+  "main": "build/main.js",
   "author": "Amal Raghav <amal.raghav@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "nodemon",
+    "dev": "ts-node src/main.ts",
     "lint": "eslint --ext .ts,.js src/",
     "test": "jest",
     "build": "tsc",
-    "prod": "node build/index.js"
+    "prod": "node build/main.js"
   },
   "devDependencies": {
     "@babel/core": "7.21.4",
@@ -26,5 +26,10 @@
     "nodemon": "^2.0.7",
     "ts-node": "^10.0.0",
     "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "cli-progress": "^3.12.0",
+    "fs-extra": "^11.1.1",
+    "playwright": "^1.32.3"
   }
 }
